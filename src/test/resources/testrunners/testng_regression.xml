@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+
+		<listeners>
+		<listener
+			class-name="com.qa.opencart.listeners.ExtentReportListener" />
+		<listener
+			class-name="com.qa.opencart.listeners.TestAllureListener" />
+
+	</listeners>
+
+
+    <test thread-count="5" name="BaseTest">
+    <classes>
+      <class name="com.qa.opencart.base.BaseTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+     <test thread-count="5" name="LoginTest">
+      <parameter name="url" value="https://naveenautomationlabs.com/opencart/index.php?route=account/login"></parameter>
+    <classes>
+      <class name="com.qa.opencart.test.LoginPageTest"/>
+    </classes>
+    </test>
+     <test thread-count="5" name="AccountTest">
+      <parameter name="url" value="https://naveenautomationlabs.com/opencart/index.php?route=account/account"></parameter>
+    <classes>
+      <class name="com.qa.opencart.test.AccountsPageTest"/>
+    </classes>
+    </test>
+
+</suite> <!-- Suite -->
+

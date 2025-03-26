@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.qa.opencart.listeners.ExtentReportListener"/>
+    <listener class-name="com.qa.opencart.listeners.TestAllureListener"/>
+  </listeners>
+  <test thread-count="5" name="LoginTest(failed)">
+    <parameter name="url" value="https://naveenautomationlabs.com/opencart/index.php?route=account/login"/>
+    <classes>
+      <class name="com.qa.opencart.test.LoginPageTest">
+        <methods>
+          <include name="isForgotPwdLinkExistTest"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.opencart.test.LoginPageTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+  <test thread-count="5" name="AccountTest(failed)">
+    <parameter name="url" value="https://naveenautomationlabs.com/opencart/index.php?route=account/account"/>
+    <classes>
+      <class name="com.qa.opencart.test.AccountsPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="searchCheckTest"/>
+          <include name="accSetup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.opencart.test.AccountsPageTest -->
+    </classes>
+  </test> <!-- AccountTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
