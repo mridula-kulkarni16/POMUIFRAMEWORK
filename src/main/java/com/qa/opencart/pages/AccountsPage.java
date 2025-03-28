@@ -24,7 +24,7 @@ public class AccountsPage {
 	
 	private By searchIcon = By.cssSelector("div#search button");
 	private By accSecHeaders = By.cssSelector("div#content h2");
-	private By acc = By.cssSelector("div#content h1");
+	private By accs = By.cssSelector("div#content h1");
 
 
 	public AccountsPage(WebDriver driver) {
